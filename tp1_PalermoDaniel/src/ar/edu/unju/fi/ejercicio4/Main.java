@@ -12,7 +12,6 @@ public class Main {
 		num = sc.nextInt();
 		fact = 1;
 		while(num > 0 ) {
-			System.out.println("Num: " + num);
 			fact= fact * num;
 			num--;
 		}
