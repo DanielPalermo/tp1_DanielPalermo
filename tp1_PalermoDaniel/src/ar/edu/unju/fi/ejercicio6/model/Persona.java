@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.ejercicio6.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.Scanner;
 
@@ -15,7 +16,9 @@ public class Persona {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public int calcularEdad(LocalDate fechaNacimiento, LocalDate fechaActual) {
+	public int calcularEdad() {
+		//LocalDateTime fechaConHorario = LocalDateTime.now();
+		LocalDate fechaActual = LocalDate.now();
 		Period periodo = Period.between(fechaNacimiento, fechaActual);
 		return periodo.getYears();
 	}
@@ -26,16 +29,17 @@ public class Persona {
 	}
 	
 	
-	public void mostrarDatos(String dni, String nombre, LocalDate fechaNacimiento,LocalDate fechaActual, String provincia, int edad) {
-		edad = calcularEdad(fechaNacimiento, fechaActual);
+	public void mostrarDatos() {
+		//
 		System.out.println("DNI: " + dni);
 		System.out.println("Nombre: " + nombre);
 		System.out.println("Provincia: " + provincia);
 		System.out.println("Fecha de nacimiento: " + fechaNacimiento);
-		if(mayorEdad(edad))
-			System.out.println("El usuario es mayor de edad, y  su edad es de: " + edad);
+		System.out.println("Edad: " + calcularEdad());
+		if(mayorEdad(calcularEdad()))
+			System.out.println("El usuario es mayor de edad, y  su edad es de: " + calcularEdad());
 		else
-			System.out.println("El usuario no es mayor de edad, y su edad es de: " + edad);
+			System.out.println("El usuario no es mayor de edad, y su edad es de: " + calcularEdad());
 	}
 	
 	

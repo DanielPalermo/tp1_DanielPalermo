@@ -59,8 +59,8 @@ public class Main {
 		per1.setDni(dni);
 		per1.setProvincia(provincia);
 		per1.setFechaNacimiento(fechaNacimiento);
-		edad = per1.calcularEdad(fechaNacimiento, fechaActual);
-		per1.mostrarDatos(dni, nombre, fechaNacimiento, fechaActual, provincia, edad);
+		edad = per1.calcularEdad();
+		per1.mostrarDatos();
 		
 		//Construccion del objeto con el constructor parametizado
 		
@@ -94,7 +94,7 @@ public class Main {
 		
 		Persona per2 = new Persona(nombre, nombre, fecha2, provincia);
 		
-		per2.mostrarDatos(dni, nombre, fechaNacimiento, fechaActual, provincia, edad);
+		per2.mostrarDatos();
 		
 		//Construccion del constructor que lleva como parámetros el dni, nombre y fecha de nacimiento
 		
@@ -124,10 +124,7 @@ public class Main {
 		
 		Persona per3 = new Persona(dni, nombre, fecha3);
 		
-		System.out.println("Nombre: " + per3.getNombre());
-		System.out.println("Dni: " + per3.getDni());
-		System.out.println("Provincia: " + per3.getProvincia());
-		System.out.println("Fecha de nacimiento: " + per3.getFechaNacimiento());
+		per3.mostrarDatos();
 	}
 	
 	
