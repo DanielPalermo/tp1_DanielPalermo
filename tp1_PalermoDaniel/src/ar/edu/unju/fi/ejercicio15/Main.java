@@ -25,6 +25,7 @@ public class Main {
 		int k=0;
 		for(int j=arreglo.length-1;j>=0;j--) {
 			System.out.println("Posicion: " + k );
+			k++;
 			System.out.println("Nombre de persona: " + arreglo[j]);
 		}
 		
